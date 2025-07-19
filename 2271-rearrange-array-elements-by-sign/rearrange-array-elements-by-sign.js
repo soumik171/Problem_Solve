@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-// brute: tc[0(n^2)], sc[0(n)]
+// brute: tc[0(n+n/2)], sc[0(n)]
 // var rearrangeArray = function (nums) {
 //   let n = nums.length;
 //   let pos = []; // size=n/2
