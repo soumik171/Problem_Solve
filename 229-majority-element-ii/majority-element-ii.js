@@ -27,7 +27,7 @@ var majorityElement = function (nums) {
   let cnt1 = 0;
   let cnt2 = 0;
 
-  for (let i in nums) {
+  for (let i = 0; i < nums.length; i++) {
     if (cnt1 == 0 && nums[i] != ele2) {
       ele1 = nums[i];
       cnt1++;
@@ -48,7 +48,7 @@ var majorityElement = function (nums) {
 
   let n = Math.floor(nums.length);
 
-  for (let i in nums) {
+  for (let i = 0; i < nums.length; i++) {
     if (nums[i] == ele1) cnt1++;
     else if (nums[i] == ele2) cnt2++;
   }
