@@ -20,7 +20,7 @@ let intToRoman = (num) => {
   };
   // Obj always keeps data in sorted order,if i am changing randomly,also it's sorted it's data, as we require large to small, so we iterate the keys to large to small
 
-  let res = "";
+  let res = [];
   for (let key of Object.keys(store).sort((a, b) => b - a)) {
     key = Number(key);
     let times = Math.floor(num / key);
@@ -34,11 +34,11 @@ let intToRoman = (num) => {
     //if using repeat, then no need to use outside while loop, cz it's alreadykeep iterating till the number of times
 
     if (times > 0) {
-      res += store[key].repeat(times);
+      res.push(store[key].repeat(times)); 
       num = num % key;
     }
   }
-  return res;
+  return res.join("");
 };
 
 
