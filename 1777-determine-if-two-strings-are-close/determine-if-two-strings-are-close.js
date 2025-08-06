@@ -10,28 +10,24 @@ var closeStrings = function (word1, word2) {
 
   // subtract with 'a' and push that in the newArray & increment that
   // can also be implemented using for of loop
+  let start = "a".charCodeAt(0);
   for (let i = 0; i < n1; i++) {
-    str1[word1[i].charCodeAt(0) - "a".charCodeAt(0)]++; // as in js, char is passed as strings, so it has be converted into char and pass them
-    str2[word2[i].charCodeAt(0) - "a".charCodeAt(0)]++;
+    str1[word1[i].charCodeAt(0) - start]++; // as in js, char is passed as strings, so it has be converted into char and pass them
+    str2[word2[i].charCodeAt(0) - start]++;
   }
 
   //   As elemets are same & frequency can be diff, so the position can have diffrent values bt position must be the same for both the str, so check that
-  for (let i = 0; i < str1.length; i++) {
+  for (let i = 0; i < 26; i++) {
     if ((str1[i] == 0 && str2[i] != 0) || (str1[i] != 0 && str2[i] == 0))
       return false;
   }
   // Sort to check the elements of the arr are same or not
 
-  str1.sort((a, b) => {
-    return a - b;
-  });
-  str2.sort((a, b) => {
-    return a - b;
-  });
-  //   str2.sort();
+  str1.sort();
+  str2.sort();
 
   // check the sorted arr indexwise, if it's matched return true or false
-  for (let i = 0; i < str1.length; i++) {
+  for (let i = 0; i < 26; i++) {
     if (str1[i] != str2[i]) return false;
   }
   return true;
