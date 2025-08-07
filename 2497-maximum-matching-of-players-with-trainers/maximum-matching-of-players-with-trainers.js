@@ -14,7 +14,7 @@ var matchPlayersAndTrainers = function (players, trainers) {
   let tI = 0;
   let count = 0;
 
-  while (pI <= pL && tI <= tL) {
+  while (pI < pL && tI < tL) {
     if (players[pI] <= trainers[tI]) {
       count++;
       pI++;
