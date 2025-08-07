@@ -7,8 +7,11 @@ var findContentChildren = function (g, s) {
   let gL = g.length; // for g length
   let sL = s.length; // for s length
 
-  g.sort((a, b) => a - b);
-  s.sort((a, b) => a - b);
+//   g.sort((a, b) => a - b);
+//   s.sort((a, b) => a - b);
+
+    g = new Uint32Array(g).sort();
+    s = new Uint32Array(s).sort();
 
   let gP = 0; // for g pointer
   let sP = 0; // for s pointer
