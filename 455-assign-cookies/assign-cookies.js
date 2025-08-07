@@ -20,7 +20,7 @@ var findContentChildren = function (g, s) {
   let count = 0; // for counting maximum of cookies that can assign to the children
 
   //   As we have to assign cookies to the children, so we have to traverse through the s[]
-  while (sP <= sL) {
+  while (sP < sL && gP < gL) {
     if (s[sP] >= g[gP]) {
       count++;
       gP++;
